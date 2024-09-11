@@ -1,0 +1,38 @@
+.yith-wcan-filters {
+    @apply bg-transparent mb-0;
+
+    form {
+        @apply grid grid-cols-2 mb-0 gap-10;
+    }
+
+    .yith-wcan-filter {
+        @apply mb-0;
+    }
+
+    .filter {
+        &-title {
+            @apply text-2xl font-sans capitalize mb-5;
+        }
+    }
+}
+
+.yith-wcan-filters .yith-wcan-filter .filter-items .filter-item.label {
+    @apply inline-block p-3 mr-2 mb-2 rounded font-medium border-2 border-petite-orchid transition text-petite-orchid hover:text-white hover:bg-petite-orchid bg-transparent shadow-none;
+
+    &:not(.disabled):hover,
+    &.active {
+        @apply text-white bg-petite-orchid shadow-none;
+    }
+
+    a {
+        @apply flex text-base h-auto text-petite-orchid;
+
+        span.term-label {
+            @apply text-base;
+        }
+
+        span.term-image {
+            @apply w-6 mr-4;
+        }
+    }
+}

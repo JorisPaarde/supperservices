@@ -1,0 +1,87 @@
+.price {
+    del {
+        @apply opacity-50;
+    }
+
+    .wholesale_price_title {
+        @apply hidden;
+    }
+
+    ins {
+        @apply no-underline ml-2;
+    }
+}
+
+.woocommerce-terms-and-conditions-wrapper {
+    @apply text-lg mb-3;
+
+    a {
+        @apply underline text-secondary;
+    }
+}
+
+.place-order {
+    @apply pt-4;
+
+    .button {
+        @apply w-full text-xs justify-center py-4;
+    }
+}
+
+.wc_payment_method {
+    @apply flex items-center flex-wrap p-4 rounded bg-neutral-200 mb-3;
+
+    label {
+        @apply font-title text-xxs uppercase ml-2;
+    }
+
+    .payment_box {
+        @apply w-full;
+    }
+}
+
+.stock {
+    @apply hidden;
+
+    &.out-of-stock {
+        @apply inline-block py-2 px-6 font-bold text-red-600 bg-red-200 rounded-full;
+    }
+}
+
+.woocommerce-columns.woocommerce-columns--2 {
+    @apply grid grid-cols-1 lg:grid-cols-2 gap-10;
+
+    .woocommerce-column__title {
+        @apply mb-2;
+    }
+
+    address {
+        @apply not-italic;
+    }
+}
+
+.woocommerce-table,
+.woocommerce-orders-table {
+    @apply text-lg w-full mb-10;
+
+    th,
+    td {
+        @apply text-left py-0.5 pr-4;
+    }
+
+    thead tr {
+        @apply border-b border-b-neutral-200;
+    }
+
+    tbody tr {
+        @apply border-b border-b-neutral-200;
+
+        td {
+            @apply py-2;
+        }
+    }
+
+    tfoot {
+        @apply pt-6 text-base;
+    }
+}

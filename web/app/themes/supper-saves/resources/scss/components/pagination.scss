@@ -1,0 +1,17 @@
+.woocommerce-pagination {
+    @apply flex items-center justify-center pt-10;
+
+    ul {
+        @apply flex items-center justify-center gap-3;
+
+        li > span,
+        li > a {
+            @apply w-10 h-10 flex items-center justify-center transition rounded text-primary;
+
+            &.current,
+            &:hover {
+                @apply bg-secondary text-white;
+            }
+        }
+    }
+}

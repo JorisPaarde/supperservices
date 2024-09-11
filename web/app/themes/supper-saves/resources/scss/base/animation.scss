@@ -1,0 +1,11 @@
+[data-title-reveal] {
+    @apply overflow-hidden opacity-0;
+
+    .split-parent {
+        @apply overflow-hidden;
+    }
+
+    .split-child {
+        @apply inline-block;
+    }
+}

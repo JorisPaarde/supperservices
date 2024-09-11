@@ -1,0 +1,107 @@
+{
+    "name": "23g/supper-saves",
+    "type": "project",
+    "license": "MIT",
+    "description": "WordPress WooCommerce for Supper Saves by 23G",
+    "authors": [
+        {
+            "name": "Jim van Eijk",
+            "email": "jim@23g.nl",
+            "homepage": "https://23g.io/"
+        }
+    ],
+    "keywords": [
+        "bedrock",
+        "composer",
+        "roots",
+        "wordpress",
+        "wp",
+        "wp-config"
+    ],
+    "support": {
+        "issues": "https://github.com/roots/bedrock/issues",
+        "forum": "https://discourse.roots.io/category/bedrock"
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://wpackagist.org",
+            "only": [
+                "wpackagist-plugin/*",
+                "wpackagist-theme/*"
+            ]
+        }
+    ],
+    "require": {
+        "php": "^7.4",
+        "ext-curl": "*",
+        "composer/installers": "^2.0",
+        "vlucas/phpdotenv": "^5.3",
+        "oscarotero/env": "^2.1",
+        "roots/bedrock-autoloader": "^1.0",
+        "roots/bedrock-disallow-indexing": "^2.0",
+        "roots/wordpress": "^6.1",
+        "roots/wp-config": "1.0.0",
+        "roots/wp-password-bcrypt": "1.1.0",
+        "wpackagist-plugin/woocommerce": "^7.3",
+        "wpackagist-plugin/wordpress-seo": "^20.3",
+        "wpackagist-plugin/contact-form-7": "^5.5",
+        "wpackagist-plugin/send-emails-with-mandrill": "^1.2",
+        "wpackagist-plugin/wp-migrate-db": "^2.2",
+        "wpackagist-plugin/autoptimize": "^3.0",
+        "wpackagist-plugin/woocommerce-wholesale-prices": "^2.0",
+        "wpackagist-plugin/jwt-auth": "^2",
+        "wpackagist-plugin/getwid": "^1.7",
+        "wpackagist-plugin/woo-order-export-lite": "^3.2",
+        "wpackagist-plugin/woo-checkout-field-editor-pro": "^1.5",
+        "wpackagist-plugin/yith-woocommerce-ajax-navigation": "^5.4",
+        "wpackagist-plugin/woo-delivery": "^1.3",
+        "wpackagist-plugin/woocommerce-sequential-order-numbers": "^1.9",
+        "wpackagist-plugin/makewebbetter-hubspot-for-woocommerce": "^1.2",
+        "wpackagist-plugin/better-wp-security": "^8.0",
+        "wpackagist-plugin/kadence-woocommerce-email-designer": "^1.4",
+        "wpackagist-plugin/username-updater": "^1.0",
+        "wpackagist-plugin/woocommerce-advanced-free-shipping": "^1.1",
+        "wpackagist-plugin/pdf-embedder": "^4.6",
+        "wpackagist-plugin/all-in-one-seo-pack": "^4.2",
+        "wpackagist-plugin/leadin": "^10.0",
+        "wpackagist-plugin/performance-lab": "^2.0",
+        "wpackagist-plugin/wp-crontrol": "^1.15"
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "^3.6.0",
+        "roave/security-advisories": "dev-latest"
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "allow-plugins": {
+            "composer/installers": true,
+            "roots/wordpress-core-installer": true
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "extra": {
+        "installer-paths": {
+            "web/app/mu-plugins/{$name}/": [
+                "type:wordpress-muplugin"
+            ],
+            "web/app/plugins/{$name}/": [
+                "type:wordpress-plugin"
+            ],
+            "web/app/themes/{$name}/": [
+                "type:wordpress-theme"
+            ]
+        },
+        "wordpress-install-dir": "web/wp"
+    },
+    "scripts": {
+        "post-root-package-install": [
+            "php -r \"copy('.env.example', '.env');\""
+        ],
+        "test": [
+            "phpcs"
+        ]
+    }
+}

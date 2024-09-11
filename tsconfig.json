@@ -1,0 +1,17 @@
+{
+    "include": ["./web/app/themes/supper-saves/resources"],
+    "compilerOptions": {
+        "target": "esnext",
+        "module": "esnext",
+        "strict": true,
+        "jsx": "preserve",
+        "moduleResolution": "node",
+        "allowSyntheticDefaultImports": true,
+        "baseUrl": "./web/app/themes/supper-saves/",
+        "noImplicitAny": true,
+        "typeRoots": ["@types"],
+        "paths": {
+            "@/*": ["resources/js/*"]
+        }
+    }
+}

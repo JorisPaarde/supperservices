@@ -1,0 +1,23 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@import 'vendors/acf';
+@import 'vendors/swiper';
+@import 'vendors/woocommerce';
+@import 'vendors/wordpress';
+
+@import 'base/animation';
+@import 'base/button';
+@import 'base/fonts';
+@import 'base/form';
+@import 'base/layout';
+@import 'base/typography';
+
+@import 'components/filters';
+@import 'components/navigation';
+@import 'components/notifications';
+@import 'components/pagination';
+@import 'components/tabs';
+
+@import 'layout/footer';

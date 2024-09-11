@@ -1,0 +1,27 @@
+.footer {
+    @apply bg-primary text-white py-20 px-8;
+
+    .widget {
+        h2 {
+            @apply text-secondary text-xs mb-10;
+        }
+
+        ul {
+            @apply pl-[1em] text-lg md:text-2xl;
+
+            li {
+                @apply before:content-[url('/app/themes/supper-saves/dist/images/nuts.svg')] before:w-[1em] before:-ml-[1em] text-secondary before:inline-block;
+
+                a {
+                    @apply text-white hover:text-secondary transition;
+                }
+            }
+        }
+    }
+
+    .social {
+        &-icon {
+            @apply w-10 h-10 rounded-full bg-secondary text-primary flex items-center justify-center text-xl;
+        }
+    }
+}

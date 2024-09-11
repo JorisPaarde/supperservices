@@ -1,0 +1,44 @@
+.button,
+.wpcf7-submit {
+    @apply inline-flex items-center justify-center py-2 px-6 rounded-full bg-primary text-white font-title uppercase text-center text-xxs leading-[24px] hover:bg-secondary transition;
+
+    &-secondary {
+        @apply bg-secondary hover:bg-primary;
+    }
+
+    &-cta {
+        @apply bg-cinnabar hover:bg-cinnabar-dark;
+    }
+
+    &-white {
+        @apply text-primary bg-white;
+    }
+
+    &-heavy-metal {
+        @apply text-white bg-heavy-metal;
+    }
+
+    &-big {
+        @apply inline-flex py-3 px-6;
+    }
+
+    &-outline {
+        @apply inline-flex items-center justify-center py-2 px-6 rounded-full border border-primary text-primary font-title uppercase text-center text-xxs leading-[24px] hover:bg-primary hover:text-white transition;
+
+        &-secondary {
+            @apply border-secondary text-secondary hover:bg-secondary;
+        }
+
+        &-white {
+            @apply border-white text-white;
+        }
+
+        &-heavy-metal {
+            @apply border-heavy-metal text-heavy-metal hover:bg-heavy-metal;
+        }
+    }
+
+    &-white {
+        @apply bg-white text-primary hover:text-primary hover:bg-secondary;
+    }
+}

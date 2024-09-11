@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="10px" height="18px" viewBox="0 0 10 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Icon</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="The-dishes---not-logged-in" transform="translate(-733.000000, -2198.000000)" fill="currentColor">
+            <g id="Group-11" transform="translate(733.000000, 2183.000000)">
+                <path d="M9.00025,33.00025 C8.74425,33.00025 8.48825,32.90225 8.29325,32.70725 L0.29325,24.70725 C-0.09775,24.31625 -0.09775,23.68425 0.29325,23.29325 L8.29325,15.29325 C8.68425,14.90225 9.31625,14.90225 9.70725,15.29325 C10.09825,15.68425 10.09825,16.31625 9.70725,16.70725 L2.41425,24.00025 L9.70725,31.29325 C10.09825,31.68425 10.09825,32.31625 9.70725,32.70725 C9.51225,32.90225 9.25625,33.00025 9.00025,33.00025" id="Icon"></path>
+            </g>
+        </g>
+    </g>
+</svg>

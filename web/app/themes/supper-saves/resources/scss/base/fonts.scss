@@ -1,0 +1,17 @@
+@layer base {
+    @font-face {
+        font-family: 'Titling';
+        src: url('../fonts/TitlingGothicFBExtended-Bold.woff2') format('woff2');
+        font-weight: bold;
+        font-style: normal;
+        font-display: swap;
+    }
+
+    @font-face {
+        font-family: 'Bilo';
+        src: url('../fonts/Bilo-Light.woff2') format('woff2');
+        font-weight: 300;
+        font-style: normal;
+        font-display: swap;
+    }
+}

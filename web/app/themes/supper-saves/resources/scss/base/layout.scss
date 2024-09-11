@@ -1,0 +1,9 @@
+body {
+    &.menu-is-open {
+        overflow: hidden;
+    }
+}
+
+[v-cloak] {
+    @apply hidden;
+}

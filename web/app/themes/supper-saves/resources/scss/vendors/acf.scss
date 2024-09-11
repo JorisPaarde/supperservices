@@ -1,0 +1,49 @@
+#acf-form {
+    .acf-fields > .acf-field {
+        @apply p-0 border-none;
+    }
+
+    .acf-input {
+        @apply flex items-center flex-wrap;
+    }
+
+    .acf-input-prepend {
+        @apply border border-r-0 border-gray-200 rounded-tl-lg rounded-bl-lg py-2 px-4 focus:ring-2 ring-secondary ring-opacity-90 focus:outline-none text-lg h-auto;
+    }
+
+    .acf-input-wrap {
+        @apply overflow-visible flex-grow;
+    }
+
+    .acf-notice {
+        @apply w-full;
+    }
+
+    .acf-switch {
+        @apply flex items-center h-[46px];
+
+        span {
+            @apply px-4 text-base;
+        }
+
+        &:hover {
+            @apply border-secondary text-secondary;
+
+            .acf-switch-slider {
+                @apply border-secondary;
+            }
+        }
+
+        &.-on {
+            @apply bg-secondary border-none;
+
+            .acf-switch-on {
+                text-shadow: none;
+            }
+
+            .acf-switch-slider {
+                @apply border-none;
+            }
+        }
+    }
+}

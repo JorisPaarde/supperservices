@@ -1,0 +1,24 @@
+.woocommerce-notices-wrapper,
+.woocommerce-NoticeGroup { 
+    ul, 
+    div {
+        @apply rounded-lg py-4 px-8 text-xl mb-10;
+
+        &.woocommerce-error {
+            @apply bg-red-200 text-red-800;
+        }
+
+        &.woocommerce-success,
+        &.woocommerce-message {
+            @apply bg-secondary text-white;
+
+            .button {
+                @apply hidden;
+            }
+        }
+    }
+
+    ul {
+        @apply flex flex-col gap-2 list-disc pl-10;
+    }
+}

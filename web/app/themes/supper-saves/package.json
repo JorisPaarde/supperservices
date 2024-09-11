@@ -1,0 +1,60 @@
+{
+    "name": "supper-saves-theme",
+    "version": "1.0.0",
+    "scripts": {
+        "dev": "mix",
+        "development": "mix",
+        "hot": "mix watch --hot",
+        "production": "mix --production",
+        "prod": "mix --production",
+        "sprite": "node sprite.js",
+        "watch-poll": "mix watch -- --watch-options-poll=1000",
+        "watch": "mix watch"
+    },
+    "devDependencies": {
+        "@typescript-eslint/eslint-plugin": "^5.10.1",
+        "@vue/compiler-sfc": "^3.2.29",
+        "autoprefixer": "^10.4.2",
+        "eslint": "^7.23.0",
+        "eslint-config-airbnb-base": "^14.2.1",
+        "eslint-import-resolver-webpack": "^0.13.0",
+        "eslint-loader": "^4.0.2",
+        "eslint-plugin-import": "^2.22.1",
+        "eslint-plugin-vue": "^7.8.0",
+        "postcss": "^8.4.5",
+        "prettier": "^2.5.1",
+        "prettier-plugin-tailwindcss": "^0.1.3",
+        "resolve-url-loader": "^5.0.0",
+        "sass": "^1.32.8",
+        "sass-loader": "^10.1.1",
+        "stylelint": "^14.3.0",
+        "stylelint-config-recess-order": "^3.0.0",
+        "svg-sprite": "^2.0.2",
+        "tailwindcss": "^3.0.13",
+        "ts-loader": "^9.2.6",
+        "typescript": "^4.5.5",
+        "vue-loader": "^16.5.0"
+    },
+    "dependencies": {
+        "@babel/core": "^7.15.8",
+        "@babel/plugin-transform-runtime": "^7.15.8",
+        "@babel/preset-env": "^7.15.8",
+        "@typescript-eslint/parser": "^5.10.1",
+        "@vue/eslint-config-typescript": "^10.0.0",
+        "eslint-config-airbnb-typescript": "^16.1.0",
+        "eslint-config-prettier": "^8.3.0",
+        "eslint-import-resolver-typescript": "^2.5.0",
+        "eslint-plugin-prettier-vue": "^3.1.0",
+        "eslint-webpack-plugin": "^3.1.1",
+        "gsap": "^3.9.1",
+        "laravel-mix": "^6.0.43",
+        "split-type": "^0.2.5",
+        "stylelint-webpack-plugin": "^3.1.1",
+        "swiper": "^8.0.6",
+        "vue": "^3.2.29"
+    },
+    "resolutions": {
+        "minimist": "^1.2.6",
+        "nth-check": "^2.0.1"
+    }
+}

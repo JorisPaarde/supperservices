@@ -1,0 +1,74 @@
+body {
+    @apply text-primary antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    @apply font-title uppercase;
+}
+
+.entry-content {
+    p {
+        @apply text-lg md:text-2xl;
+
+        &:not(:last-child) {
+            @apply mb-6;
+        }
+    }
+
+    ul {
+        @apply list-disc pl-4 text-lg md:text-xl;
+
+        &:not(:last-child) {
+            @apply mb-6;
+        }
+
+        li {
+            @apply mb-2;
+        }
+    }
+
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        @apply mb-4;
+    }
+
+    h2 {
+        @apply text-2xl md:text-3xl;
+    }
+
+    h3 {
+        @apply text-xl;
+    }
+
+    h4 {
+        @apply text-lg;
+    }
+
+    h5 {
+        @apply text-base;
+    }
+
+    h6 {
+        @apply text-sm;
+    }
+
+    blockquote {
+        @apply relative p-4 md:p-6 border-l-4 border-secondary;
+
+        &:not(:last-child) {
+            @apply mb-6;
+        }
+
+        p {
+            @apply relative font-title uppercase text-secondary text-sm;
+        }
+    }
+}

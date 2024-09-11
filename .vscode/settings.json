@@ -1,0 +1,6 @@
+{
+    "blade.format.enable": true,
+    "vetur.format.options.tabSize": 4,
+    "prettier.configPath": ".prettierrc",
+    "editor.formatOnSave": false
+}

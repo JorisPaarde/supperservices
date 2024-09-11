@@ -1,0 +1,35 @@
+.navbar {
+    @apply fixed top-0 left-0 hidden md:block w-full h-screen md:h-auto overflow-auto bg-primary md:bg-transparent md:relative pt-8 z-50;
+
+    &.open {
+        @apply block;
+    }
+}
+
+.main-navigation {
+    @apply flex items-center flex-col md:flex-row gap-6 md:gap-10 justify-center h-full;
+
+    .menu-item {
+        &.current-menu-item {
+            a {
+                @apply text-secondary;
+            }
+
+            &.button {
+                a {
+                    @apply text-white;
+                }
+            }
+        }
+
+        a {
+            @apply text-white md:text-primary text-xs font-bold font-title uppercase hover:text-secondary transition;
+        }
+
+        &.button {
+            a {
+                @apply md:text-white hover:text-white md:text-xxs;
+            }
+        }
+    }
+}
