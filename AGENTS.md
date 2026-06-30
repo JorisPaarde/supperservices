@@ -50,3 +50,19 @@ PSR2 style violations in the repo — that is expected, not an environment probl
   cosmetic and do not break functionality.
 - The committed `composer.lock` had a malformed/stale `yith-woocommerce-ajax-navigation` entry that
   broke `composer install`; it has been synced to the `composer.json` constraint.
+
+### Importing a downloaded database dump
+
+Place the dump in `database/` (git-ignored). Supported formats: `.sql`, `.sql.gz`, `.zip` (containing
+a `.sql`), `.tar.gz`. Then run:
+
+```bash
+sudo service mariadb start
+./scripts/import-database.sh
+# or: ./scripts/import-database.sh database/your-dump.sql.gz
+```
+
+The script recreates the `supper_saves` database, imports the dump, runs `wp search-replace` from
+the imported `siteurl`/`home` to `WP_HOME` (`http://localhost:8080`), flushes rewrites, and
+re-activates the Sage theme + ACF. Uploads in `web/app/uploads/` from a full-site export are
+separate — if your download is DB-only, media may still be missing until uploads are synced too.
