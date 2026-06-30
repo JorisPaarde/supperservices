@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ad3de4c588f45977a24cfad6127c3acc",
+    "content-hash": "8aa061ba16cd039b79da25d04ac1cfbe",
     "packages": [
         {
             "name": "composer/installers",
@@ -1526,15 +1526,15 @@
         },
         {
             "name": "wpackagist-plugin/yith-woocommerce-ajax-navigation",
-            "version": " 4.32.0",
+            "version": "5.21.0",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/yith-woocommerce-ajax-navigation/",
-                "reference": "tags/ 4.32.0"
+                "reference": "tags/5.21.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/yith-woocommerce-ajax-navigation.4.32.0.zip"
+                "url": "https://downloads.wordpress.org/plugin/yith-woocommerce-ajax-navigation.5.21.0.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
@@ -2457,6 +2457,6 @@
         "php": "^7.4",
         "ext-curl": "*"
     },
-    "platform-dev": [],
-    "plugin-api-version": "2.6.0"
+    "platform-dev": {},
+    "plugin-api-version": "2.9.0"
 }

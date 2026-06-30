@@ -21,6 +21,25 @@ Supper saves corporate + Woocommerce webshop
 
 ### Setup for development
 
+#### Option A — Local on your Mac (recommended)
+
+Requires [Docker Desktop](https://www.docker.com/products/docker-desktop/).
+
+```bash
+git clone <repo-url> supperservices && cd supperservices
+./scripts/setup-local.sh ~/Downloads/your-wp-migrate-export.zip
+```
+
+Site: **http://localhost:8080** · Admin: **http://localhost:8080/wp/wp-admin/**
+
+To import a dump later:
+
+```bash
+./scripts/import-database-docker.sh ~/Downloads/your-export.zip
+```
+
+#### Option B — Native PHP/MySQL (no Docker)
+
 - Clone the repository
 - Install Composer dependencies:
 
@@ -52,6 +71,22 @@ Supper saves corporate + Woocommerce webshop
     npm ci
     npm run watch
     ```
+
+#### Uploading a staging DB to a Cloud Agent (no SSH)
+
+Cursor Cloud Agents do **not** expose SSH/SCP. To send a WP Migrate zip programmatically:
+
+**On your Mac:**
+
+```bash
+./scripts/upload-dump.sh ~/Downloads/your-export.zip
+```
+
+Paste the printed `https://transfer.sh/...` link into the agent chat. The agent runs:
+
+```bash
+./scripts/receive-dump.sh '<url>'
+```
 
 ### NPM vulnerabilities
 

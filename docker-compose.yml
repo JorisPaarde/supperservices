@@ -1,0 +1,48 @@
+# Local development stack (Mac/Linux). Usage: see scripts/setup-local.sh
+services:
+  db:
+    image: mariadb:10.11
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: supper_saves
+      MYSQL_USER: supper
+      MYSQL_PASSWORD: supper
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - "3306:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  app:
+    image: webdevops/php-nginx:7.4
+    restart: unless-stopped
+    ports:
+      - "8080:80"
+    volumes:
+      - .:/app
+      - ./vhost.conf:/opt/docker/etc/nginx/vhost.conf:ro
+    environment:
+      WEB_DOCUMENT_ROOT: /app/web
+    depends_on:
+      db:
+        condition: service_healthy
+
+  wpcli:
+    image: wordpress:cli-php7.4
+    user: "33:33"
+    volumes:
+      - .:/app
+    working_dir: /app
+    depends_on:
+      db:
+        condition: service_healthy
+    entrypoint: wp
+    command: "--info"
+
+volumes:
+  db_data:
